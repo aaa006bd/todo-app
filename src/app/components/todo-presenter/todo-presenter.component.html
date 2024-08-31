@@ -1,0 +1,9 @@
+<!-- src/app/components/todo-presenter/todo-presenter.component.html -->
+<ul>
+  <li *ngFor="let todo of todos">
+    <input type="checkbox" [checked]="todo.isCompleted" (change)="onToggle(todo.id)">
+    <span [ngClass]="{ 'completed': todo.isCompleted }">{{ todo.title }}</span>
+    <button (click)="onEdit(todo)">Edit</button>
+    <button (click)="onDelete(todo.id)">Delete</button>
+  </li>
+</ul>

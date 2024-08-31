@@ -1,0 +1,4 @@
+/* src/app/components/todo-presenter/todo-presenter.component.css */
+.completed {
+  text-decoration: line-through;
+}
