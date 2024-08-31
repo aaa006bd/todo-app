@@ -1,0 +1,13 @@
+<!-- src/app/components/todo-container/todo-container.component.html -->
+<div>
+  <h2>To-Do List</h2>
+  <input [(ngModel)]="newTodoTitle" placeholder="Enter a new task">
+  <button (click)="addTodo()">Add</button>
+
+  <app-todo-presenter
+    [todos]="todos"
+    (deleteTodo)="deleteTodo($event)"
+    (editTodo)="editTodo($event)"
+    (toggleTodoCompletion)="toggleTodoCompletion($event)">
+  </app-todo-presenter>
+</div>
